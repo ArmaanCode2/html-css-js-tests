@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+</head>
+
+<body>
+    <div onmouseover="call()" onmouseout="call()" class="test color"></div>
+    <div onmouseover="call()" onmouseout="call()" class="test2 color"></div>
+    <style>
+        .color {
+            background-color: black;
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function call(){
+            console.log("called")
+            anime({
+            targets: ".test",
+            translateX: 270,
+            direction: 'alternate',
+            scale:2,
+            easing:"linear",
+            loop: true,
+            duration: 2000
+        });
+        anime({
+            targets:'.test2',
+            translateY:270,
+            direction: 'alternate',
+            scale:2,
+            easing:"linear",
+            loop: true, 
+            duration:2000,
+        })
+    }
+    </script>
+</body>
+
+</html>
