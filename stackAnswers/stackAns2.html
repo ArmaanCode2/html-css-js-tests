@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Answer</title>
+  </head>
+  <body>
+    <div class="sign">
+      <h1 class="glitch" id="upper-gl" data-text="Glitch1">Glitch1</h1>
+      &nbsp;
+      <h1 class="glitch" id="bottom-gl" data-text="Glitch2">Glitch2</h1>
+      <span class="sub">Test</span>
+    </div>
+
+    <script>
+      deglitcher();
+    
+    function deglitcher() {
+      const glitch = document.querySelector("#bottom-gl");
+      setTimeout(function () {
+          glitch.classList.add('glitch-off');
+          glitch.classList.remove('glitch');
+          console.log('Testing if working')
+      }, 2000);
+    }
+    </script>
+  </body>
+</html>
