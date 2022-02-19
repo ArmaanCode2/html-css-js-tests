@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer</title>
+    <style>
+        .small{
+            width: 10%;
+            height: 10%;
+            transition: all 1s ease;
+        }
+        
+        .notSmall{
+            width: 30%;
+            height: 30%;
+            transition: all 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <img src="Capture 2020-10-28 13.50.58.jpg" class="small" id="smart_thumbnail" alt="The image">
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let thumbnailElement =  document.getElementById("smart_thumbnail");
+      thumbnailElement.addEventListener("click", function() {
+        if(thumbnailElement.classList == "small"){
+            thumbnailElement.classList.remove('small');
+            thumbnailElement.classList.add('notSmall');
+            console.log('now image is big')
+        }else{
+            thumbnailElement.classList.add('small');
+            thumbnailElement.classList.remove('notSmall');
+            console.log('now image is small')
+        }
+      });
+      });
+    </script>
+</body>
+</html>
