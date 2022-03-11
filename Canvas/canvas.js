@@ -1,11 +1,16 @@
 const canvas = document.querySelector('canvas');
 const ct = canvas.getContext("2d");
-const clearBtn = document.querySelector('.eraseDIV')
+const clearBtn = document.querySelector('.eraseDIV');
+const currentColorShow = document.querySelector('.currentColor');
 let color = "black";
+
+//setting the default color to black
+currentColorShow.style.background = "black";
 
 //Color of Stroke
 function strokeColor(sColor){
     color = sColor;
+    currentColorShow.style.background = color;
 }
 
 //Clear The Canvas
