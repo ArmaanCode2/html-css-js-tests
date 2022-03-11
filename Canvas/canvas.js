@@ -56,7 +56,6 @@ sizing();
 
 window.addEventListener('resize',() =>{
     sizing();
-    console.log('hello');
 })
 
 clearBtn.addEventListener('click',clearCanvas);
