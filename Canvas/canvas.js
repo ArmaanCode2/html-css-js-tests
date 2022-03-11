@@ -66,9 +66,30 @@ window.addEventListener('resize',() =>{
 clearBtn.addEventListener('click',clearCanvas);
 
 //changing colors of drawing
-document.querySelector('.black').addEventListener('click',() => strokeColor("black"));
-document.querySelector('.purple').addEventListener('click',() => strokeColor("purple"));
+document.querySelector('.white').addEventListener('click',() => strokeColor("white"));
+document.querySelector('.grey').addEventListener('click',() => strokeColor("grey"));
 document.querySelector('.red').addEventListener('click',() => strokeColor("red"));
-document.querySelector('.blue').addEventListener('click',() => strokeColor("blue"));
-document.querySelector('.pink').addEventListener('click',() => strokeColor("pink"));
+document.querySelector('.orange').addEventListener('click',() => strokeColor("orange"));
 document.querySelector('.yellow').addEventListener('click',() => strokeColor("yellow"));
+document.querySelector('.lightgreen').addEventListener('click',() => strokeColor("lightgreen"));
+document.querySelector('.skyblue').addEventListener('click',() => strokeColor("skyblue"));
+document.querySelector('.blue').addEventListener('click',() => strokeColor("blue"));
+document.querySelector('.purple').addEventListener('click',() => strokeColor("purple"));
+document.querySelector('.pink').addEventListener('click',() => strokeColor("pink"));
+document.querySelector('.brown').addEventListener('click',() => strokeColor("brown"));
+
+
+// next line start
+
+
+document.querySelector('.black').addEventListener('click',() => strokeColor("black"));
+document.querySelector('.darkGrey').addEventListener('click',() => strokeColor("#4C4C4C"));
+document.querySelector('.darkRed').addEventListener('click',() => strokeColor("#740B07"));
+document.querySelector('.darkOrange').addEventListener('click',() => strokeColor("#C43702"));
+document.querySelector('.darkYellow').addEventListener('click',() => strokeColor("#E7A200"));
+document.querySelector('.darkGreen').addEventListener('click',() => strokeColor("#01550F"));
+document.querySelector('.darkBlue').addEventListener('click',() => strokeColor("#00559E"));
+document.querySelector('.darkestBlue').addEventListener('click',() => strokeColor("#0D0864"));
+document.querySelector('.darkPurple').addEventListener('click',() => strokeColor("#550068"));
+document.querySelector('.darkPink').addEventListener('click',() => strokeColor("#A75476"));
+document.querySelector('.darkBrown').addEventListener('click',() => strokeColor("#62300D"));
