@@ -2,7 +2,9 @@ const canvas = document.querySelector('canvas');
 const ct = canvas.getContext("2d");
 const clearBtn = document.querySelector('.eraseDIV');
 const currentColorShow = document.querySelector('.currentColor');
+const downloadBtn = document.querySelector('.downloadDIV');
 let color = "black";
+let strokeWidth = 10;
 
 //setting the default color to black
 currentColorShow.style.background = "black";
@@ -11,6 +13,12 @@ currentColorShow.style.background = "black";
 function strokeColor(sColor){
     color = sColor;
     currentColorShow.style.background = color;
+    ct.beginPath();
+}
+//changing width of stroke
+function changeStrokeWidth(swidth){
+    strokeWidth = swidth;
+    ct.beginPath();
 }
 
 //Clear The Canvas
@@ -42,7 +50,7 @@ window.addEventListener('load',() =>{
         }
         function draw(e){
             if(!paint) return;
-            ct.lineWidth = 10;
+            ct.lineWidth = strokeWidth;//5 very small , 10 small , 20 large , 30 very large
             ct.lineCap = "round";
             ct.strokeStyle = color; 
 
@@ -93,3 +101,26 @@ document.querySelector('.darkestBlue').addEventListener('click',() => strokeColo
 document.querySelector('.darkPurple').addEventListener('click',() => strokeColor("#550068"));
 document.querySelector('.darkPink').addEventListener('click',() => strokeColor("#A75476"));
 document.querySelector('.darkBrown').addEventListener('click',() => strokeColor("#62300D"));
+
+
+//brush size changing lsteners
+
+
+document.querySelector('.very-small-size').addEventListener('click',() => changeStrokeWidth(5));
+document.querySelector('.small-size').addEventListener('click',() => changeStrokeWidth(10));
+document.querySelector('.large-size').addEventListener('click',() => changeStrokeWidth(20));
+document.querySelector('.very-large-size').addEventListener('click',() => changeStrokeWidth(30));
+
+downloadBtn.addEventListener('click',()=>{
+    const canvasImg = canvas.toDataURL();
+    console.log(canvasImg)
+    if(window.navigator.msSaveBlob) alert("Browser Not Supported")
+    else{
+        const anchor = document.createElement("a");
+        document.body.appendChild(anchor);
+        anchor.href = canvasImg;
+        anchor.download = "Canvas-img.png";
+        anchor.click();
+        document.body.removeChild(anchor); 
+    }
+})
