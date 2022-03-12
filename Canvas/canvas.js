@@ -113,7 +113,6 @@ document.querySelector('.very-large-size').addEventListener('click',() => change
 
 downloadBtn.addEventListener('click',()=>{
     const canvasImg = canvas.toDataURL();
-    console.log(canvasImg)
     if(window.navigator.msSaveBlob) alert("Browser Not Supported")
     else{
         const anchor = document.createElement("a");
