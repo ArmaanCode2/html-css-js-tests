@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+.dropdown{
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+}
+
+.account{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    height: 15%;
+}
+
+.account img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: 18px;
+    left: 10px;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.profileName{
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: 22px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.Account-refer{
+    position: relative;
+    top: 22px;
+    left: -57px;
+    text-decoration: none;
+    color: blue;
+}
