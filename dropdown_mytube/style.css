@@ -10,16 +10,20 @@ body{
     background-color: white;
     color: black;
     height: 100%;
-    width: 30%;
+    width: 29%;
     position: absolute;
     top: 0;
     left: 40%;
     border: 1px solid rgba(0,0,0,0.1);
     outline: none;
+    overflow-y: hidden;
+}
+
+.bottom-line{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .account{
-    border-bottom: 1px solid rgba(0,0,0,0.1);
     height: 15%;
 }
 
@@ -50,5 +54,39 @@ body{
     top: 22px;
     left: -57px;
     text-decoration: none;
-    color: blue;
+    color: blue; 
+}
+
+.icon{
+    height: 25px;
+    margin: 10px 16px;
+}
+
+.ptag{
+    display: inline-block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    position: relative;
+    top: -17px;
+}
+
+.cursor{cursor: pointer;}
+
+.hover:hover{
+    background-color: #EEEEEE;
+}
+
+.dropdown:hover{
+    overflow-y: scroll;
+}
+.dropdown::-webkit-scrollbar{
+    width: 0.7vw;
+}
+
+.dropdown::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+.dropdown::-webkit-scrollbar-thumb{
+    background-color: #909090;
 }
