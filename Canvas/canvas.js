@@ -5,6 +5,7 @@ const currentColorShow = document.querySelector('.currentColor');
 const downloadBtn = document.querySelector('.downloadDIV');
 let color = "black";
 let strokeWidth = 10;
+let canvastop = canvas.offsetTop;
 
 //setting the default color to black
 currentColorShow.style.background = "black";
@@ -48,6 +49,20 @@ window.addEventListener('load',() =>{
             paint = false;
             ct.beginPath();
         }
+        
+        function drawOnMobile(e){
+            paint = true;
+            if(!paint) return;
+            ct.lineWidth = strokeWidth;
+            ct.lineCap = "round";
+            ct.strokeStyle = color;
+
+            ct.lineTo(e.touches[0].clientX,e.touches[0].clientY - canvastop);
+            ct.stroke();
+            ct.beginPath();
+            ct.moveTo(e.touches[0].clientX,e.touches[0].clientY - canvastop);
+        }
+
         function draw(e){
             if(!paint) return;
             ct.lineWidth = strokeWidth;//5 very small , 10 small , 20 large , 30 very large
@@ -60,9 +75,12 @@ window.addEventListener('load',() =>{
             ct.moveTo(e.clientX,e.clientY);
         }
 
+
     canvas.addEventListener('mousedown',start);
     canvas.addEventListener('mouseup',finished);
     canvas.addEventListener('mousemove',draw);
+    // for mobile
+    canvas.addEventListener('touchmove',drawOnMobile);
 })
 
 sizing();
